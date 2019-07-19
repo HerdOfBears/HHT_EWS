@@ -125,4 +125,4 @@ for j in range(numSims):
 df_traj = pd.concat(list_traj_append)
 df_traj.set_index(['Realisation number','Time'], inplace=True)
 
-# df_traj.to_csv("/home/jmenard/HHT_EWS/traj_data.csv")
+# df_traj.to_csv("/home/jmenard/HHT_EWS/traj_data_fold.csv")
