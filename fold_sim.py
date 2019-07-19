@@ -39,7 +39,7 @@ dir_name = 'fold_ews_temp'
 # Simulation parameters
 dt = 0.01
 t0 = 0
-tmax = 500
+tmax = 10^4#500
 tburn = 100 # burn-in period
 numSims = 1
 seed = 2 # random number generation seed
@@ -125,4 +125,4 @@ for j in range(numSims):
 df_traj = pd.concat(list_traj_append)
 df_traj.set_index(['Realisation number','Time'], inplace=True)
 
-# df_traj.to_csv("/home/jmenard/HHT_EWS/traj_data_fold.csv")
+# df_traj.to_csv("/home/jmenard/HHT_EWS/traj_data_fold_long.csv")
