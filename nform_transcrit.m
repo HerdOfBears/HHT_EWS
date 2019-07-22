@@ -5,5 +5,5 @@ function xdot = nform_transcrit(x, r)
 
 	%}
 
-	x_dot = r.*x - x.*x;
+	xdot = r.*x - x.*x;
 end
