@@ -26,7 +26,7 @@ function finResults = transcrit_sim(t0, dt, tmax, numSims)
 	%% Implement Euler Maryuyama for stocahstic simulation
 
 	% Set seed
-	rng(101)
+	rng(25)
 
 	% Initialise a list to collect trajectories
 	disp(length(t));
@@ -38,7 +38,7 @@ function finResults = transcrit_sim(t0, dt, tmax, numSims)
 		
 		% Create brownian increments (s.d. sqrt(dt))
 		dW_x_burn = sigma.*sqrt(dt).*randn(fix(tburn/dt),1);
-		dW_x = sigma.*sqrt(dt).*randn(length(t));
+		dW_x = sigma.*sqrt(dt).*randn(length(t),1);
 			
 		% Run burn-in period on x0
 		for i = 1:1:(fix(tburn./dt))
