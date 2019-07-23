@@ -26,7 +26,7 @@ function finResults = transcrit_sim(t0, dt, tmax, numSims)
 	%% Implement Euler Maryuyama for stocahstic simulation
 
 	% Set seed
-	rng(25)
+	rng(100)
 
 	% Initialise a list to collect trajectories
 	disp(length(t));
