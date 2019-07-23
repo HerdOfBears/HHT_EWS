@@ -10,7 +10,7 @@ function imfs = eEMD( signal, sigma, N, numIMFs, interpolation_type)
 	interpolation_type = {'spline', 'pchip'}
 
 	%}
-
+	rng(101);
 	if interpolation_type == "Spline"
 		interpolation_type = 'spline';
 	end
