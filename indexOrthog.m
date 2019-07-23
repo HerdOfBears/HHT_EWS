@@ -5,6 +5,7 @@ function io_ = indexOrthog(signal, imf1, imf2)
 		IO = \sum_{time} (c_i c_j)/(signal ^2)
 	%}
 
-	io = sum( (imf1.*imf2)./(signal.*signal) );
+	% io_ = sum( (imf1.*imf2)./(signal.*signal) );
+	io_ = 2.*sum( (imf1.*imf2)./(imf1.*imf1 + imf2.*imf2) );
 
 end
