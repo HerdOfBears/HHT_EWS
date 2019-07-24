@@ -10,7 +10,7 @@ function imfs = eEMD( signal, sigma, N, numIMFs, interpolation_type)
 	interpolation_type = {'spline', 'pchip'}
 
 	%}
-	rng(101);
+	rng(10);
 	if interpolation_type == "Spline"
 		interpolation_type = 'spline';
 	end
@@ -23,8 +23,8 @@ function imfs = eEMD( signal, sigma, N, numIMFs, interpolation_type)
 	avg_imf = [];
 	for i_ = 1:1:N
 		noise_ = sigma.*randn(m,n);
-		imf_ = emd(signal + noise_, 'Interpolation', interpolation_type)
-		
+		[imf_,res__, info__] = emd(signal + noise_, 'Interpolation', interpolation_type, 'Display', 0);
+		% res__ and info__ are not used.
 
 		if i_ == 1
 			avg_imf = imf_(:, 1:numIMFs);
